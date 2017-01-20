@@ -2,6 +2,8 @@
 
 # INSTRUCTION DE DÉPLOIEMENT
 
+Projet fait par Nicolas DELTHEIL & Charles GUYARD 
+
 # Cours du 09/12/2016 
 
 Lignes de commande: 
