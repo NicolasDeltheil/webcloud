@@ -24,5 +24,5 @@
   
   # Cette commande permet à l'administrateur système d'accorder à certains utilisateurs la possibilité de lancer une commande en tant qu'administrateur, ou comme autre utilisateur. 
   
-	sudo rm -Rf Webcloud
+	sudo rm -Rf webcloud
 	sudo git clone https://github.com/NicolasDeltheil/webcloud
