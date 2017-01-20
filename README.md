@@ -144,14 +144,14 @@ rediriger la sortie standards et en faire l’entrée standard du prochain progr
 	github -> deploy.sh ->  
 				# !/bin/bash 
 
-# remplacer « xxxx » par l’adresse IP de notre droplet 
+remplacer « xxxx » par l’adresse IP de notre droplet 
 
 			tail –n +3 « $ø »    ssh root@xxxx.xxxx   ; exit 
 			set –ev
-# uptate les serveurs 
+uptate les serveurs : 
 			apt –get update 
 
-# send the list of process to /var/ww/index.html 
+send the list of process to /var/ww/index.html : 
 
 	ps>w/html/index.html
 
