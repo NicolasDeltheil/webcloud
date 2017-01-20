@@ -80,6 +80,26 @@ lancer le ssh serveur web init.d/nginx blabla
 
 N.B : Lorsqu’on travaille ces lignes de commande et ce projet, au lieu de prendre ses notes sur google docs, les prendre sur GitHub pour qu’il voit ce qu’on fait.
 
+# Cours du 06/01/2017 
+
+	apt-get update
+	pt-get upgrade 
+	apt-get install nginux 
+	17806207030
+	srd/var/www/html
+	nano index html 
+
+	ns cron
+
+	cd (répertoire user)
+	nano date sh
+	#!/bin/bash
+	echo `date`
+	Ctrl+ O (enregistrer)
+	Ctrl+ x (sortir)
+	chmod +x date sh
+	./date sh 
+
 # Cours du 16/01/2017 
 
 - permissions
@@ -106,7 +126,7 @@ rediriger la sortie standards et en faire l’entrée standard du prochain progr
 
 - organosation sys fichiers unix 
 
-- script de deploiement : script bash dans compte git, cloner ça et se connecter en ssh à une adresse IP pour executer le code en bash qui va sur la machine distante : mettre à journ installer un serveur,copier un fichier index html 
+script de deploiement : script bash dans compte git, cloner ça et se connecter en ssh à une adresse IP pour executer le code en bash qui va sur la machine distante : mettre à journ installer un serveur,copier un fichier index html 
 
 
 	drwx------   5 nicolasdeltheil  staff   170 20 fév  2016 Applications
@@ -156,4 +176,4 @@ send the list of process to /var/ww/index.html :
 	ps>w/html/index.html
 
 
-# Cours du 09/12/2016 
+
