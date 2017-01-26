@@ -2,7 +2,11 @@
 
 # INSTRUCTION DE DÉPLOIEMENT
 
-Projet d'Architecture des Systèmes d'Infirmations fait par Nicolas DELTHEIL & Charles GUYARD 
+Projet d'Architecture des Systèmes d'Informations fait par Nicolas DELTHEIL & Charles GUYARD.  
+
+
+Clé SSH: 8d:7d:15:26:77:d4:f2:83:fa:16:e5:e2:5f:d2:9b:90
+Mot de passe: isep2017
 
 # Cours du 09/12/2016 
 
