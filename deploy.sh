@@ -1,28 +1,36 @@
-#!/bin/bash
-	tail -n +3 "$0" | ssh ubuntu@138.68.64.15; exit;
+#Script de déploiement. 
 
 
-	# Prevent errors
-	set -e
+# !/bin/bash
+#connection 
+tail -n +3 "S0" | ssh root@138.68.64.15 ; exit
 
+# Prevent errors
+set -eu
 
-	# Send apt-get update, upgrade, install ngnix
-	echo " ... apt-get update..."
-	sudo apt-get update
-	echo " ... apt-get upgrade..."
-	sudo apt-get upgrade
-	echo " ... apt-get install nginx..."
-	sudo apt-get install nginx
+#Mise à jour de la VM
+apt-get update
+apt-get upgrade
 
+#installation du serveur web et de l'outil git
+# Send apt-get update, upgrade, install ngnix
+apt-get install nginx -y
+apt-get install git -y
 
-	# Set permission to html folder
-	# chown ubuntu:ubuntu .
-	cd /var/www/html
+#placement dans le répertoire /var/www/html/
+cd /var/www/html/
 
-
-	# TODO: pull if exist, please
-  
-  # Cette commande permet à l'administrateur système d'accorder à certains utilisateurs la possibilité de lancer une commande en tant qu'administrateur, ou comme autre utilisateur. 
+#importation du projet github
+# Cette commande permet à l'administrateur système d'accorder à certains utilisateurs la possibilité de lancer une commande en tant qu'administrateur, ou comme autre utilisateur. 
   
 	sudo rm -Rf webcloud
 	sudo git clone https://github.com/NicolasDeltheil/webcloud
+
+#copie de index.html
+cp index.html Webcloud
+
+#accord de tous les droit aux utilisateurs su les fichier
+
+cd Webcloud 
+chmod +rwx deploy.sh
+chmod +rwx index.html
