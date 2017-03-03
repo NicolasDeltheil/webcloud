@@ -1,39 +1,43 @@
 # Projet WEBCLOUD 26/01/2017
 
-# INSTRUCTION DE DÉPLOIEMENT
+# Instructions de déploiement
 
-Projet d'Architecture des Systèmes d'Informations fait par Nicolas DELTHEIL & Charles GUYARD.  
+Projet d'Architecture des Systèmes d'Informations fait par Nicolas
+DELTHEIL & Charles GUYARD.
 
+`Clé SSH: 8d:7d:15:26:77:d4:f2:83:fa:16:e5:e2:5f:d2:9b:90`
 
-Clé SSH: 8d:7d:15:26:77:d4:f2:83:fa:16:e5:e2:5f:d2:9b:90
-Mot de passe: isep2017
+Mot de passe: xxxxxx
 
-# Cours du 09/12/2016 
+bzg: ne jamais mettre de mots de passe en public!!  De plus, je n'ai
+besoin ni de la clef ni du mot de passe.
 
-Lignes de commande: 
+# Cours du 09/12/2016
 
-	ls /etc 
+Lignes de commande:
+
+	ls /etc
 	man ls
 	find /etc/ -name “*conf” -type f
 	ls /etc/apache2/
 	telnet localhost:80
-	apt-get upgrade	 	 	 	
+	apt-get upgrade
 
+Regex : expression régulière, une chaîne de caractères, que l’on
+appelle parfois un motif, qui décrit, selon une syntaxe précise, un
+ensemble de chaînes de caractères possibles.
 
-Regex : expression régulière, une chaîne de caractères, que l’on appelle parfois un motif, qui décrit, selon une syntaxe précise, un ensemble de chaînes de caractères possibles.
+- SAAS: Software as a service
+- PAAS: Platform
+- CAAS: Computer
+- IAAS: Infrastructure
+- Exemple: Gmail
 
-SAAS: Software as a service
-PAAS: Platform
-CAAS: Computer
-IAAS: Infrastructure
-Exemple: Gmail
-
-Cloud: 
-
+Cloud:
 
 Ubuntu = distribution= façon de construire un système d’exploitation
 
-Questions : 
+Questions :
 
 
 
@@ -41,13 +45,13 @@ Evaluation Individuelle: Créer un dépôt de code sur Github, créer un mini si
 But: Automatisation du déploiement
 → une ligne de commande qui envoie le fichier zip
 
-Services auxquels on peut faire appel : Digital ocean (on crée une MV; Attention payant 5$ par mois environ), Debian 8, Ubuntu 16, 
+Services auxquels on peut faire appel : Digital ocean (on crée une MV; Attention payant 5$ par mois environ), Debian 8, Ubuntu 16,
 
 Login du Prof sur Github: bzg
 
 Nom du dépôt: webcloud
 
-READ ME.md: on accepte lors de la création du dépôt. 
+READ ME.md: on accepte lors de la création du dépôt.
 
 SSH Secure Shell
 
@@ -58,7 +62,7 @@ Clé publique :
 utiliser ssh-keygen
 
 
-Instructions pour l’utilisateur : 
+Instructions pour l’utilisateur :
 
 Il faut que la personne soit sur Debian 8 ou Ubuntu 16 (Bien penser à implémenter les mises à jour dans les instructions :
 
@@ -74,7 +78,7 @@ Il faut que tu te connectes sur le ssh root@[adresse.ip]
 Tu arrives dans le root et là tu fais 2 commandes :
 1°) ~$ git clone https://github.com/[user]/webcloud
 
-Dans ce dépôt il y aura les instructions pour pouvoir lancer le script et créer un site web 
+Dans ce dépôt il y aura les instructions pour pouvoir lancer le script et créer un site web
 
 2°) ~$ ./init shell pour exécuter un script que l’on aura préparé
 
@@ -88,14 +92,14 @@ lancer le ssh serveur web init.d/nginx blabla
 
 N.B : Lorsqu’on travaille ces lignes de commande et ce projet, au lieu de prendre ses notes sur google docs, les prendre sur GitHub pour qu’il voit ce qu’on fait.
 
-# Cours du 06/01/2017 
+# Cours du 06/01/2017
 
 	apt-get update
-	pt-get upgrade 
-	apt-get install nginux 
+	pt-get upgrade
+	apt-get install nginux
 	17806207030
 	srd/var/www/html
-	nano index html 
+	nano index html
 
 	ns cron
 
@@ -106,35 +110,35 @@ N.B : Lorsqu’on travaille ces lignes de commande et ce projet, au lieu de pren
 	Ctrl+ O (enregistrer)
 	Ctrl+ x (sortir)
 	chmod +x date sh
-	./date sh 
+	./date sh
 
-# Cours du 16/01/2017 
+# Cours du 16/01/2017
 
 - permissions
 
-r=read  4, w=write 2, x=executer  1 
-choown : changer l’utilisateur 
-chmod : changer les permisions du fichier 
+r=read  4, w=write 2, x=executer  1
+choown : changer l’utilisateur
+chmod : changer les permisions du fichier
 
 
 
 stdin/stdout/stderr
 
 entrée standard : stdin
-sortie standard : stdout 
+sortie standard : stdout
 
-cron : lancer des taches à des periodes régulières 
+cron : lancer des taches à des periodes régulières
 
 
 
 - Pipe
 
-rediriger la sortie standards et en faire l’entrée standard du prochain programme 
+rediriger la sortie standards et en faire l’entrée standard du prochain programme
 
 
-- organosation sys fichiers unix 
+- organosation sys fichiers unix
 
-script de deploiement : script bash dans compte git, cloner ça et se connecter en ssh à une adresse IP pour executer le code en bash qui va sur la machine distante : mettre à journ installer un serveur,copier un fichier index html 
+script de deploiement : script bash dans compte git, cloner ça et se connecter en ssh à une adresse IP pour executer le code en bash qui va sur la machine distante : mettre à journ installer un serveur,copier un fichier index html
 
 
 	drwx------   5 nicolasdeltheil  staff   170 20 fév  2016 Applications
@@ -169,19 +173,16 @@ script de deploiement : script bash dans compte git, cloner ça et se connecter
 	exit 0
 
 
-	github -> deploy.sh ->  
-				# !/bin/bash 
+	github -> deploy.sh ->
+				# !/bin/bash
 
-remplacer « xxxx » par l’adresse IP de notre droplet 
+remplacer « xxxx » par l’adresse IP de notre droplet
 
-			tail –n +3 « $ø »    ssh root@xxxx.xxxx   ; exit 
+			tail –n +3 « $ø »    ssh root@xxxx.xxxx   ; exit
 			set –ev
-uptate les serveurs : 
-			apt –get update 
+uptate les serveurs :
+			apt –get update
 
-send the list of process to /var/ww/index.html : 
+send the list of process to /var/ww/index.html :
 
 	ps>w/html/index.html
-
-
-
